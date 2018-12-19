@@ -1,8 +1,9 @@
 version: '3'
 services:            #services => separate services or essentially types of containers 
-  redos-server:
+  redis-server:
     image: 'redis'
   node-app:
+    restart: always
     build: .
     ports:
-     - "8081:8081"   #The firsr number is the port on your local machine,The second is th port inside the container
+     - "4001:8081"   #The firsr number is the port on your local machine,The second is th port inside the container
