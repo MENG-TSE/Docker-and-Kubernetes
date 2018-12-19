@@ -11,7 +11,7 @@ WORKDIR /usr/app
 #RUN npm install
 
 #改成這樣
-#這樣才不會假設改了index,js檔案的東西  rebuild的時候都要跑一次下面的dependency檔愛
+#這樣才不會假設改了index.js檔案的東西  rebuild的時候都要跑一次下面的dependency檔案
 COPY ./package.json ./
 #這樣才讀的到資料夾裡面的其他檔案
 # Install some dependencies
