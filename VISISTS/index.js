@@ -29,3 +29,6 @@ app.listen(8081,() => {
     //docker0compose up -d
 //Stop Containers
     //docker-compose down
+
+
+//docker-compose ps   要在有   .yml的路徑下才能ps出來
