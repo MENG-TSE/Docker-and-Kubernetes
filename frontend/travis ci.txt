@@ -1,0 +1,3 @@
+實際上應該是可以跑 travis CI
+
+影片上上傳到GITHUB的路徑是  frontend/....    不適docker-Mastery/frontend/..  所以我才不能傳到 travis ci 去

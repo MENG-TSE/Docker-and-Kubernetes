@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run MENG-TSE/Docker-and-Kubernetes npm run test -- --coverage
+
+deploy:
+  provider: elasticbeantalk
+  region: "us-west-2"      #Docker-env.qbtbvwcxmh.us-west-2.elasticbeanstalk.com
+  app: "docker"
+  env: "Docker-env"
+  bucker_name: "elasticbeanstalk-us-west-2-306476627547"
+  bucket_path: "docker"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
