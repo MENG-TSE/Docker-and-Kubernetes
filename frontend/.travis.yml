@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t  MENG-TSE/Docker-and-Kubernetes -f Dockerfile.dev . # . 的意思是 use the current directory when figuring out what to do ,-t => tag
+
+script:
+  - docker run MENG-TSE/Docker-and-Kubernetes npm run test -- --coverage
